@@ -17,12 +17,12 @@ Inverse document frequency(IDF) - Weight of the word or term which is given by (
 <p align="center"> <img width="586" alt="Screenshot 2023-04-20 at 1 13 08 PM" src="https://user-images.githubusercontent.com/98439391/233477639-693584cc-d2ff-43d2-a726-c4a573da89e7.png">
 </p>
 </br>
-#### 3. k-means clustering: 
+#### 3. K-means clustering: 
 Used k-means clustering to group similar listings together based on their feature vectors. Each listing will belong to one and only  one cluster. The number of clusters will depend on the size of the dataset and the desired level of granularity.
 Generated clusters look like this - 
 <p align="center"> <img width="568" alt="Screenshot 2023-04-20 at 1 25 05 PM" src="https://user-images.githubusercontent.com/98439391/233479998-2efec6e9-4304-4f46-bace-0ff455558fa6.png">
  </p>
-#### Good vs Bad hotels: 
+ #### Good vs Bad hotels: 
  The clustering results indicate that the model has given higher rating to a hotel listing when customers recorded more and more positive experiences in the comments. And the review comments of listings which scored low on ratings contained some kind of dissatisfaction expressed by customers regarding the hotel.
  eg. Good rated hotel - Hotel listing with predicted rating of 5 along with reviewer comments
  <p align="center"> <img width="574" alt="Screenshot 2023-04-20 at 1 29 52 PM" src="https://user-images.githubusercontent.com/98439391/233481098-09715c5f-0443-4852-8d71-21b02e4afb91.png">
