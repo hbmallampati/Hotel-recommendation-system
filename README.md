@@ -11,11 +11,20 @@ Reviews scraped from tourists visiting sites are a popular and useful source of 
 <p align="center">     <img width="400" height="120" alt="Screenshot 2023-04-20 at 12 59 59 PM" src="https://user-images.githubusercontent.com/98439391/233475021-12453f4f-c4c0-4198-9ce8-550e29b55d9c.png" align="center">
    </br><img width="400" height="160" alt="Screenshot 2023-04-20 at 1 00 34 PM" src="https://user-images.githubusercontent.com/98439391/233475107-e848d6e2-d9cb-4272-95c7-7ec8b818a91a.png" align="center"> 
 </p>
-3. TF-IDF vectorization: Inverse Document Frequency Term Frequency is a method to transform text or a word into a vector form which can be used for analysis. It is the amalgamation of Term Frequency(TF) as shown in Fig A, which is the number of times a specific word or text appears in the document. And the weight of the word or term which is given by Inverse Document Frequency(IDF) as shown in Fig B. To conclude, it gives the rarer term a higher weight and lower weight for a common term.
+</br>
+2. TF-IDF vectorization: Inverse Document Frequency Term Frequency is a method to transform text or a word into a vector form which can be used for analysis. It is the amalgamation of Term Frequency(TF) as shown in Fig A, which is the number of times a specific word or text appears in the document. And the weight of the word or term which is given by Inverse Document Frequency(IDF) as shown in Fig B. To conclude, it gives the rarer term a higher weight and lower weight for a common term.
+</br>
 4. k-means clustering: 
-5. Build recommendation system: 
-6. Check predicted ratings
-7. Hyperparameter tuning and cross-validation
-8. Model evaluation using test data
-9. Generate recommendations
-10. Results
+</br>
+6. Build recommendation system: 
+</br>
+8. Check predicted ratings
+</br>
+10. Hyperparameter tuning and cross-validation
+</br>
+12. Model evaluation using test data
+</br>
+14. Generate recommendations
+</br>
+16. Results
+</br>
