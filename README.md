@@ -14,17 +14,17 @@ Reviews scraped from tourists visiting sites are a popular and useful source of 
 </br>
 2. TF-IDF vectorization: Inverse Document Frequency Term Frequency is a method to transform text or a word into a vector form which can be used for analysis. It is the amalgamation of Term Frequency(TF) as shown in Fig A, which is the number of times a specific word or text appears in the document. And the weight of the word or term which is given by Inverse Document Frequency(IDF) as shown in Fig B. To conclude, it gives the rarer term a higher weight and lower weight for a common term.
 </br>
-4. k-means clustering: 
+3. k-means clustering: 
 </br>
-6. Build recommendation system: 
+4. Build recommendation system: 
 </br>
-8. Check predicted ratings
+5. Check predicted ratings
 </br>
-10. Hyperparameter tuning and cross-validation
+6. Hyperparameter tuning and cross-validation
 </br>
-12. Model evaluation using test data
+7. Model evaluation using test data
 </br>
-14. Generate recommendations
+8. Generate recommendations
 </br>
-16. Results
+9. Results
 </br>
