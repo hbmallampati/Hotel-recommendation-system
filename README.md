@@ -17,6 +17,7 @@ Inverse document frequency(IDF) - Weight of the word or term which is given by (
 <p align="center"> <img width="586" alt="Screenshot 2023-04-20 at 1 13 08 PM" src="https://user-images.githubusercontent.com/98439391/233477639-693584cc-d2ff-43d2-a726-c4a573da89e7.png">
 </p>
 </br>
+
 #### 3. K-means clustering: 
 Used k-means clustering to group similar listings together based on their feature vectors. Each listing will belong to one and only  one cluster. The number of clusters will depend on the size of the dataset and the desired level of granularity.
 Generated clusters look like this - 
