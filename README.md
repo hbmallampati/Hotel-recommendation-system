@@ -1,10 +1,9 @@
 # Hotel-recommendation-system
-Recommendation system is a useful tool that takes into account an individual's opinion in order to identify their contents more correctly and selectively. Due to the abundance of internet information, the growth rate of online hotel searching has been significantly faster in recent years, making this online hotel searching a very challenging work.Travelers' reviews replace word-of-mouth, but searching becomes a time-consuming job dependent on user preferences.
-Reviews scraped from tourists visiting sites are a popular and useful source of information for hotel suggestions, but little attention has been made to how to show reviewers' reviews in a comprehensible style. As a result, our project has focused on predicting ratings for the hotels based on reviewer comments and establishing a recommendation system that proposes the top three hotels in the area that are exclusive to the user, taking into account the aforementioned tendencies.
+The vast amount of information on the internet has made online hotel searching a daunting task. As a result, recommendation systems have become valuable tools that allow individuals to receive personalized content based on their opinions. Traveler reviews have become a popular source of information for hotel suggestions. This project aims to predict hotel ratings based on reviewer comments and create a recommendation system that suggests the top 'n' hotels in the area based on the user's preferences.
 
 ### Steps
-1. Predict ratings: Predicting ratings for hotels based on reviewer comments by using K-means clustering algorithm.
-2. Spark recommendation model: Building an Apache Spark model to generate recommendations for hotels using Alternating Least Squares algorithm.
+1. Predict ratings: Predicting ratings for hotels based on reviewer comments by using K-means clustering algorithm. The reviews will be subjected to sentiment analysis, and machine learning algorithms will be applied to anticipate the rating of the comments and classify them into various rating groups.
+2. Spark recommendation model: Building an Apache Spark model to generate recommendations for hotels using Alternating Least Squares algorithm. The use of collaborative filtering will enable the suggestion of the listing to the user by generating a feature matrix based on the user reviews ratings, which are calculated through sentiment analysis to anticipate properties that are suitable for the user.
 
 ### System 
 #### 1. Data pre-processing: 
@@ -26,6 +25,7 @@ Generated clusters look like this -
  
  #### Good vs Bad hotels: 
  The clustering results indicate that the model has given higher rating to a hotel listing when customers recorded more and more positive experiences in the comments. And the review comments of listings which scored low on ratings contained some kind of dissatisfaction expressed by customers regarding the hotel.
+ </br>
  eg. Good rated hotel - Hotel listing with predicted rating of 5 along with reviewer comments
  <p align="center"> <img width="574" alt="Screenshot 2023-04-20 at 1 29 52 PM" src="https://user-images.githubusercontent.com/98439391/233481098-09715c5f-0443-4852-8d71-21b02e4afb91.png">
   </p>
@@ -45,15 +45,14 @@ We can see that for the first three rows the (actual rating, predicted rating) a
 </br>
 
 #### 6. Hyperparameter tuning and cross-validation: 
-To improve the prediction accuracy we choose to do hyperparameter tuning and find the best parameters. 
-We performed grid search on the hyperparameters with three-fold cross validation to obtain the best parameters. We then tuned our ALS model with these best parameters.
+To improve the prediction accuracy we choose to do hyperparameter tuning and find the best parameters. We performed grid search on the hyperparameters with three-fold cross validation to obtain the best parameters. We then tuned our ALS model with these best parameters.
 </br>
 #### 7. Model evaluation using test data: 
-I chose to evaluate our model using Root Mean Square Error. Since the errors are squared before they are averaged, the RMSE gives a relatively high weight to large errors. This makes RMSE more useful when large errors are particularly undesirable like in our recommendation system.
+I chose to evaluate the model using Root Mean Square Error as in RMSE the errors are squared before they are averaged, thus RMSE gives a relatively high weight to large errors. This makes RMSE more useful when large errors are particularly undesirable like in this recommendation system.
 </br>
 
 #### 8. Generate recommendations: 
-My recommendation system recommends listing to the user, based on collaborative filtering. Our recommendation system takes as input the ALS model, “reviewer_id” and an integer indicating the number of listings we would like to suggest to the user and suggest those many recommended properties to the user.
+The recommendation system recommends listing to the user, based on collaborative filtering. The recommendation system takes as input the ALS model, “reviewer_id” and an integer indicating the number of listings we would like to suggest to the user and suggest those many recommended properties to the user.
 recommendListings function definition:
 <p align= "center"><img width="1189" alt="Screenshot 2023-04-20 at 1 44 06 PM" src="https://user-images.githubusercontent.com/98439391/233483594-82b88871-8aa6-4951-9b33-7ca421bc67c6.png">
 </p>
