@@ -9,7 +9,7 @@ Reviews scraped from tourists visiting sites are a popular and useful source of 
 ### System 
 1. Data pre-processing: This step involved dropping nulls, performing data cleaning to remove non-text characters/ html characters and performing data    validation to keep only valied english characters.</br>
 <p>     <img width="400" height="80" alt="Screenshot 2023-04-20 at 12 59 59 PM" src="https://user-images.githubusercontent.com/98439391/233475021-12453f4f-c4c0-4198-9ce8-550e29b55d9c.png" align="center">
-  <img width="400" height="80" alt="Screenshot 2023-04-20 at 1 00 34 PM" src="https://user-images.githubusercontent.com/98439391/233475107-e848d6e2-d9cb-4272-95c7-7ec8b818a91a.png" align="center"> 
+  <img width="360" height="80" alt="Screenshot 2023-04-20 at 1 00 34 PM" src="https://user-images.githubusercontent.com/98439391/233475107-e848d6e2-d9cb-4272-95c7-7ec8b818a91a.png" align="center"> 
 </p>
 3. TF-IDF vectorization: Inverse Document Frequency Term Frequency is a method to transform text or a word into a vector form which can be used for analysis. It is the amalgamation of Term Frequency(TF) as shown in Fig A, which is the number of times a specific word or text appears in the document. And the weight of the word or term which is given by Inverse Document Frequency(IDF) as shown in Fig B. To conclude, it gives the rarer term a higher weight and lower weight for a common term.
 4. k-means clustering: 
