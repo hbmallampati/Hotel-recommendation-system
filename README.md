@@ -23,6 +23,7 @@ Used k-means clustering to group similar listings together based on their featur
 Generated clusters look like this - 
 <p align="center"> <img width="568" alt="Screenshot 2023-04-20 at 1 25 05 PM" src="https://user-images.githubusercontent.com/98439391/233479998-2efec6e9-4304-4f46-bace-0ff455558fa6.png">
  </p>
+ 
  #### Good vs Bad hotels: 
  The clustering results indicate that the model has given higher rating to a hotel listing when customers recorded more and more positive experiences in the comments. And the review comments of listings which scored low on ratings contained some kind of dissatisfaction expressed by customers regarding the hotel.
  eg. Good rated hotel - Hotel listing with predicted rating of 5 along with reviewer comments
@@ -32,14 +33,17 @@ Generated clusters look like this -
  <p align="center"> <img width="572" alt="Screenshot 2023-04-20 at 1 31 58 PM" src="https://user-images.githubusercontent.com/98439391/233481316-134f192c-800e-462b-9d2b-708425e56d92.png">
   </p>
 </br>
+
 #### 4. Build recommendation system: 
 Employed collaborative filtering technique in Apache Spark, made use of Spark ML, ALS algorithm, to build recommendation engine.
 </br>
+
 #### 5. Check predicted ratings
 We can see that for the first three rows the (actual rating, predicted rating) are (4, 2.941), (3, 2.88), (3, 3.007) which is quite close but we still have some error. To reduce the error and improve the performance we did hyperparameter tuning.
 <p align= "center"><img width="402" alt="Screenshot 2023-04-20 at 1 39 42 PM" src="https://user-images.githubusercontent.com/98439391/233482916-5e0090b5-e293-477d-96da-62eb78a3f385.png">
 </p>
 </br>
+
 #### 6. Hyperparameter tuning and cross-validation: 
 To improve the prediction accuracy we choose to do hyperparameter tuning and find the best parameters. 
 We performed grid search on the hyperparameters with three-fold cross validation to obtain the best parameters. We then tuned our ALS model with these best parameters.
@@ -47,6 +51,7 @@ We performed grid search on the hyperparameters with three-fold cross validation
 #### 7. Model evaluation using test data: 
 I chose to evaluate our model using Root Mean Square Error. Since the errors are squared before they are averaged, the RMSE gives a relatively high weight to large errors. This makes RMSE more useful when large errors are particularly undesirable like in our recommendation system.
 </br>
+
 #### 8. Generate recommendations: 
 My recommendation system recommends listing to the user, based on collaborative filtering. Our recommendation system takes as input the ALS model, “reviewer_id” and an integer indicating the number of listings we would like to suggest to the user and suggest those many recommended properties to the user.
 recommendListings function definition:
@@ -54,6 +59,7 @@ recommendListings function definition:
 </p>
 The method prints “n” most favorable listings for the user.
 </br>
+
 #### 9. Results
 Example 1: For the user with a reviewer_id = 50740909 the three most favorable listings recommended by our system with their predicted ratings are-
 <p align="center"><img width="562" alt="Screenshot 2023-04-20 at 1 51 24 PM" src="https://user-images.githubusercontent.com/98439391/233485249-749dec2f-3007-455b-96dd-aa15540270c0.png">
