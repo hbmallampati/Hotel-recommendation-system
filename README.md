@@ -32,8 +32,10 @@ Generated clusters look like this -
   </p>
 </br>
 #### 4. Build recommendation system: 
+Employed collaborative filtering technique in Apache Spark, made use of Spark ML, ALS algorithm, to build recommendation engine.
 </br>
 #### 5. Check predicted ratings
+We can see that for the first three rows the (actual rating, predicted rating) are (4, 2.941), (3, 2.88), (3, 3.007) which is quite close but we still have some error. To reduce the error and improve the performance we did hyperparameter tuning.
 <p align= "center"><img width="402" alt="Screenshot 2023-04-20 at 1 39 42 PM" src="https://user-images.githubusercontent.com/98439391/233482916-5e0090b5-e293-477d-96da-62eb78a3f385.png">
 </p>
 </br>
@@ -52,4 +54,13 @@ recommendListings function definition:
 The method prints “n” most favorable listings for the user.
 </br>
 #### 9. Results
+Example 1: For the user with a reviewer_id = 50740909 the three most favorable listings recommended by our system with their predicted ratings are-
+<p align="center"><img width="562" alt="Screenshot 2023-04-20 at 1 51 24 PM" src="https://user-images.githubusercontent.com/98439391/233485249-749dec2f-3007-455b-96dd-aa15540270c0.png">
+</p>
+Example 2: For the user with a reviewer_id = 21814 the three most favorable listings recommended by our system with their predicted ratings are-
+<p align="center"><img width="563" alt="Screenshot 2023-04-20 at 1 51 46 PM" src="https://user-images.githubusercontent.com/98439391/233485203-1b10e30f-1bcf-4d99-9d13-12d795c56da9.png">
+</p>
+Example 3: For the user with a reviewer_id = 32040267 the three most favorable listings recommended by our system with their predicted ratings are- 
+<p align="center"><img width="561" alt="Screenshot 2023-04-20 at 1 52 03 PM" src="https://user-images.githubusercontent.com/98439391/233485176-9a1320ae-9b89-4bc9-9eef-e1a64497ec4f.png">
+</p>
 </br>
