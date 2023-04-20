@@ -7,11 +7,7 @@ Reviews scraped from tourists visiting sites are a popular and useful source of 
 2. Spark recommendation model: Building an Apache Spark model to generate recommendations for hotels using Alternating Least Squares algorithm.
 
 ### System 
-1. Data pre-processing: Collecting the data on the hotels and users which is - review comments given by user and rating received by hotels. For each hotel listing, created a feature vector representing its attributes such as listing_id,Hotel_name,reviewer_id,reviewer_name,rating,comments etc. For each user, created a vector representing their preferences, based on their past behavior, ratings, and interactions.
-This step also involved performing data cleaning to remove non-text characters/ html characters and performing data    validation to keep only valied english characters.</br>
-<p align="center">     <img width="400" height="120" alt="Screenshot 2023-04-20 at 12 59 59 PM" src="https://user-images.githubusercontent.com/98439391/233475021-12453f4f-c4c0-4198-9ce8-550e29b55d9c.png" align="center">
-   </br><img width="400" height="160" alt="Screenshot 2023-04-20 at 1 00 34 PM" src="https://user-images.githubusercontent.com/98439391/233475107-e848d6e2-d9cb-4272-95c7-7ec8b818a91a.png" align="center"> 
-</p>
+1. Data pre-processing: Collecting the data on the hotels and users which is - review comments given by user and rating received by hotels. For each hotel listing, created a feature vector representing its attributes - listing_id,Hotel_name,reviewer_id,reviewer_name,rating,comments etc. For each user, created a vector representing their preferences, based on their past behavior, ratings, and interactions.
 </br>
 2. TF-IDF vectorization: Term Frequency - Inverse Document Frequency is a method to transform text or documents into a vector form which can be used for analysis. 
 Term Frequency(TF) - which is the number of times a specific word or text appears in the document. 
@@ -34,12 +30,19 @@ Generated clusters look like this -
 4. Build recommendation system: 
 </br>
 5. Check predicted ratings
+<p align= "center"><img width="402" alt="Screenshot 2023-04-20 at 1 39 42 PM" src="https://user-images.githubusercontent.com/98439391/233482916-5e0090b5-e293-477d-96da-62eb78a3f385.png">
+</p>
 </br>
-6. Hyperparameter tuning and cross-validation
+6. Hyperparameter tuning and cross-validation: To improve the prediction accuracy we choose to do hyperparameter tuning and find the best parameters. 
+We performed grid search on the hyperparameters with three-fold cross validation to obtain the best parameters. We then tuned our ALS model with these best parameters.
 </br>
-7. Model evaluation using test data
+7. Model evaluation using test data: We choose to evaluate our model using Root Mean Square Error. Since the errors are squared before they are averaged, the RMSE gives a relatively high weight to large errors. This makes RMSE more useful when large errors are particularly undesirable like in our recommendation system.
 </br>
-8. Generate recommendations
+8. Generate recommendations: Our recommendation system recommends listing to the user, based on collaborative filtering. Our recommendation system takes as input the ALS model, “reviewer_id” and an integer indicating the number of listings we would like to suggest to the user and suggest those many recommended properties to the user.
+recommendListings function definition:
+<p align= "center"><img width="1189" alt="Screenshot 2023-04-20 at 1 44 06 PM" src="https://user-images.githubusercontent.com/98439391/233483594-82b88871-8aa6-4951-9b33-7ca421bc67c6.png">
+</p>
+The method prints “n” most favorable listings for the user.
 </br>
 9. Results
 </br>
